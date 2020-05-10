@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "95296b410b3346ca8d03886b2d6210f7",
+    "content-hash": "70ade2b35b474737f34b047767e5e020",
     "packages": [
         {
             "name": "automattic/jetpack-autoloader",
@@ -1072,6 +1072,24 @@
             "description": "The WooCommerce core REST API.",
             "homepage": "https://github.com/woocommerce/woocommerce-rest-api",
             "time": "2020-01-28T21:04:51+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/kirki",
+            "version": "3.1.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/kirki/",
+                "reference": "tags/3.1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/kirki.3.1.2.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/kirki/"
         }
     ],
     "packages-dev": [
