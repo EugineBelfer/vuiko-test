@@ -4,35 +4,99 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7110ce6fb2c5347d331bc50d385fa554",
+    "content-hash": "95296b410b3346ca8d03886b2d6210f7",
     "packages": [
         {
-            "name": "composer/installers",
-            "version": "v1.9.0",
+            "name": "automattic/jetpack-autoloader",
+            "version": "v1.6.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/composer/installers.git",
-                "reference": "b93bcf0fa1fccb0b7d176b0967d969691cd74cca"
+                "url": "https://github.com/Automattic/jetpack-autoloader.git",
+                "reference": "3bcbe1ae19febd6beeb181cf11af0bf0b7abe7e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/b93bcf0fa1fccb0b7d176b0967d969691cd74cca",
-                "reference": "b93bcf0fa1fccb0b7d176b0967d969691cd74cca",
+                "url": "https://api.github.com/repos/Automattic/jetpack-autoloader/zipball/3bcbe1ae19febd6beeb181cf11af0bf0b7abe7e7",
+                "reference": "3bcbe1ae19febd6beeb181cf11af0bf0b7abe7e7",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.0 || ^2.0"
+                "composer-plugin-api": "^1.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7 || ^6.5 || ^7.5"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Automattic\\Jetpack\\Autoloader\\CustomAutoloaderPlugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Automattic\\Jetpack\\Autoloader\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Creates a custom autoloader for a plugin or theme.",
+            "time": "2020-03-26T07:57:53+00:00"
+        },
+        {
+            "name": "automattic/jetpack-constants",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Automattic/jetpack-constants.git",
+                "reference": "881618defb04134ddba120e7835af1a474a11edc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Automattic/jetpack-constants/zipball/881618defb04134ddba120e7835af1a474a11edc",
+                "reference": "881618defb04134ddba120e7835af1a474a11edc",
+                "shasum": ""
+            },
+            "require-dev": {
+                "php-mock/php-mock": "^2.1",
+                "phpunit/phpunit": "^5.7 || ^6.5 || ^7.5"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "A wrapper for defining constants in a more testable way.",
+            "time": "2020-04-15T18:58:53+00:00"
+        },
+        {
+            "name": "composer/installers",
+            "version": "v1.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/installers.git",
+                "reference": "141b272484481432cda342727a427dc1e206bfa0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/installers/zipball/141b272484481432cda342727a427dc1e206bfa0",
+                "reference": "141b272484481432cda342727a427dc1e206bfa0",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0"
             },
             "replace": {
                 "roundcube/plugin-installer": "*",
                 "shama/baton": "*"
             },
             "require-dev": {
-                "composer/composer": "1.6.* || 2.0.*@dev",
-                "composer/semver": "1.0.* || 2.0.*@dev",
-                "phpunit/phpunit": "^4.8.36",
-                "sebastian/comparator": "^1.2.4",
-                "symfony/process": "^2.3"
+                "composer/composer": "1.0.*@dev",
+                "phpunit/phpunit": "^4.8.36"
             },
             "type": "composer-plugin",
             "extra": {
@@ -68,7 +132,6 @@
                 "Kanboard",
                 "Lan Management System",
                 "MODX Evo",
-                "MantisBT",
                 "Mautic",
                 "Maya",
                 "OXID",
@@ -123,7 +186,6 @@
                 "shopware",
                 "silverstripe",
                 "sydes",
-                "sylius",
                 "symfony",
                 "typo3",
                 "wordpress",
@@ -131,7 +193,67 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2020-04-07T06:57:05+00:00"
+            "time": "2019-08-12T15:00:31+00:00"
+        },
+        {
+            "name": "maxmind-db/reader",
+            "version": "v1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/maxmind/MaxMind-DB-Reader-php.git",
+                "reference": "febd4920bf17c1da84cef58e56a8227dfb37fbe4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/maxmind/MaxMind-DB-Reader-php/zipball/febd4920bf17c1da84cef58e56a8227dfb37fbe4",
+                "reference": "febd4920bf17c1da84cef58e56a8227dfb37fbe4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "conflict": {
+                "ext-maxminddb": "<1.6.0,>=2.0.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "2.*",
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpcov": "^3.0",
+                "phpunit/phpunit": "5.*",
+                "squizlabs/php_codesniffer": "3.*"
+            },
+            "suggest": {
+                "ext-bcmath": "bcmath or gmp is required for decoding larger integers with the pure PHP decoder",
+                "ext-gmp": "bcmath or gmp is required for decoding larger integers with the pure PHP decoder",
+                "ext-maxminddb": "A C-based database decoder that provides significantly faster lookups"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MaxMind\\Db\\": "src/MaxMind/Db"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Gregory J. Oschwald",
+                    "email": "goschwald@maxmind.com",
+                    "homepage": "https://www.maxmind.com/"
+                }
+            ],
+            "description": "MaxMind DB Reader API",
+            "homepage": "https://github.com/maxmind/MaxMind-DB-Reader-php",
+            "keywords": [
+                "database",
+                "geoip",
+                "geoip2",
+                "geolocation",
+                "maxmind"
+            ],
+            "time": "2019-12-19T22:59:03+00:00"
         },
         {
             "name": "oscarotero/env",
@@ -175,6 +297,80 @@
                 "env"
             ],
             "time": "2019-04-03T18:28:43+00:00"
+        },
+        {
+            "name": "pelago/emogrifier",
+            "version": "v3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MyIntervals/emogrifier.git",
+                "reference": "f6a5c7d44612d86c3901c93f1592f5440e6b2cd8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MyIntervals/emogrifier/zipball/f6a5c7d44612d86c3901c93f1592f5440e6b2cd8",
+                "reference": "f6a5c7d44612d86c3901c93f1592f5440e6b2cd8",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "ext-libxml": "*",
+                "php": "^5.6 || ~7.0 || ~7.1 || ~7.2 || ~7.3 || ~7.4",
+                "symfony/css-selector": "^2.8 || ^3.0 || ^4.0 || ^5.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.15.3",
+                "phpmd/phpmd": "^2.7.0",
+                "phpunit/phpunit": "^5.7.27",
+                "squizlabs/php_codesniffer": "^3.5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Pelago\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oliver Klee",
+                    "email": "github@oliverklee.de"
+                },
+                {
+                    "name": "Zoli Szabó",
+                    "email": "zoli.szabo+github@gmail.com"
+                },
+                {
+                    "name": "John Reeve",
+                    "email": "jreeve@pelagodesign.com"
+                },
+                {
+                    "name": "Jake Hotson",
+                    "email": "jake@qzdesign.co.uk"
+                },
+                {
+                    "name": "Cameron Brooks"
+                },
+                {
+                    "name": "Jaime Prado"
+                }
+            ],
+            "description": "Converts CSS styles into inline style attributes in your HTML code",
+            "homepage": "https://www.myintervals.com/emogrifier.php",
+            "keywords": [
+                "css",
+                "email",
+                "pre-processing"
+            ],
+            "time": "2019-12-26T19:37:31+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -424,17 +620,84 @@
             "time": "2016-03-01T16:27:06+00:00"
         },
         {
-            "name": "symfony/polyfill-ctype",
-            "version": "v1.15.0",
+            "name": "symfony/css-selector",
+            "version": "v5.0.8",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "4719fa9c18b0464d399f1a63bf624b42b6fa8d14"
+                "url": "https://github.com/symfony/css-selector.git",
+                "reference": "5f8d5271303dad260692ba73dfa21777d38e124e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/4719fa9c18b0464d399f1a63bf624b42b6fa8d14",
-                "reference": "4719fa9c18b0464d399f1a63bf624b42b6fa8d14",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/5f8d5271303dad260692ba73dfa21777d38e124e",
+                "reference": "5f8d5271303dad260692ba73dfa21777d38e124e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\CssSelector\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Jean-François Simon",
+                    "email": "jeanfrancois.simon@sensiolabs.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony CssSelector Component",
+            "homepage": "https://symfony.com",
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-03-27T16:56:45+00:00"
+        },
+        {
+            "name": "symfony/polyfill-ctype",
+            "version": "v1.16.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-ctype.git",
+                "reference": "1aab00e39cebaef4d8652497f46c15c1b7e45294"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/1aab00e39cebaef4d8652497f46c15c1b7e45294",
+                "reference": "1aab00e39cebaef4d8652497f46c15c1b7e45294",
                 "shasum": ""
             },
             "require": {
@@ -446,7 +709,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.15-dev"
+                    "dev-master": "1.16-dev"
                 }
             },
             "autoload": {
@@ -493,24 +756,24 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-02-27T09:26:54+00:00"
+            "time": "2020-05-08T16:50:20+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v4.1.4",
+            "version": "v4.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "feb6dad5ae24b1380827aee1629b730080fde500"
+                "reference": "539bb6927c101a5605d31d11a2d17185a2ce2bf1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/feb6dad5ae24b1380827aee1629b730080fde500",
-                "reference": "feb6dad5ae24b1380827aee1629b730080fde500",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/539bb6927c101a5605d31d11a2d17185a2ce2bf1",
+                "reference": "539bb6927c101a5605d31d11a2d17185a2ce2bf1",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.5.9 || ^7.0",
+                "php": "^5.5.9 || ^7.0 || ^8.0",
                 "phpoption/phpoption": "^1.7.2",
                 "symfony/polyfill-ctype": "^1.9"
             },
@@ -557,7 +820,258 @@
                 "env",
                 "environment"
             ],
-            "time": "2020-04-12T15:20:09+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/GrahamCampbell",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/vlucas/phpdotenv",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-05-02T14:08:57+00:00"
+        },
+        {
+            "name": "woocommerce/action-scheduler",
+            "version": "v3.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/woocommerce/action-scheduler.git",
+                "reference": "93451c8b1061010f0dcf1ac50da7e4b44d119fb1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/woocommerce/action-scheduler/zipball/93451c8b1061010f0dcf1ac50da7e4b44d119fb1",
+                "reference": "93451c8b1061010f0dcf1ac50da7e4b44d119fb1",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.6",
+                "woocommerce/woocommerce-sniffs": "0.0.8",
+                "wp-cli/wp-cli": "~1.5.1"
+            },
+            "type": "wordpress-plugin",
+            "extra": {
+                "scripts-description": {
+                    "test": "Run unit tests",
+                    "phpcs": "Analyze code against the WordPress coding standards with PHP_CodeSniffer",
+                    "phpcbf": "Fix coding standards warnings/errors automatically with PHP Code Beautifier"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "description": "Action Scheduler for WordPress and WooCommerce",
+            "homepage": "https://actionscheduler.org/",
+            "time": "2020-05-05T13:26:04+00:00"
+        },
+        {
+            "name": "woocommerce/woocommerce",
+            "version": "4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/woocommerce/woocommerce.git",
+                "reference": "1f739fb86207e1884607adf95c7e86f048c06e23"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/woocommerce/woocommerce/zipball/1f739fb86207e1884607adf95c7e86f048c06e23",
+                "reference": "1f739fb86207e1884607adf95c7e86f048c06e23",
+                "shasum": ""
+            },
+            "require": {
+                "automattic/jetpack-autoloader": "1.6.0",
+                "automattic/jetpack-constants": "^1.1",
+                "composer/installers": "1.7.0",
+                "maxmind-db/reader": "1.6.0",
+                "pelago/emogrifier": "^3.1",
+                "php": ">=5.6|>=7.0",
+                "woocommerce/action-scheduler": "3.1.5",
+                "woocommerce/woocommerce-admin": "1.1.1",
+                "woocommerce/woocommerce-blocks": "2.5.16",
+                "woocommerce/woocommerce-rest-api": "1.0.7"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "7.5.20",
+                "woocommerce/woocommerce-sniffs": "0.0.9",
+                "wp-cli/i18n-command": "^2.2"
+            },
+            "type": "wordpress-plugin",
+            "extra": {
+                "installer-paths": {
+                    "packages/action-scheduler": [
+                        "woocommerce/action-scheduler"
+                    ],
+                    "packages/woocommerce-rest-api": [
+                        "woocommerce/woocommerce-rest-api"
+                    ],
+                    "packages/woocommerce-blocks": [
+                        "woocommerce/woocommerce-blocks"
+                    ],
+                    "packages/woocommerce-admin": [
+                        "woocommerce/woocommerce-admin"
+                    ]
+                },
+                "scripts-description": {
+                    "test": "Run unit tests",
+                    "phpcs": "Analyze code against the WordPress coding standards with PHP_CodeSniffer",
+                    "phpcbf": "Fix coding standards warnings/errors automatically with PHP Code Beautifier",
+                    "makepot-audit": "Generate i18n/langauges/woocommerce.pot file and run audit",
+                    "makepot": "Generate i18n/langauges/woocommerce.pot file"
+                }
+            },
+            "autoload": {
+                "exclude-from-classmap": [
+                    "includes/legacy",
+                    "includes/libraries"
+                ],
+                "psr-4": {
+                    "Automattic\\WooCommerce\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "description": "An eCommerce toolkit that helps you sell anything. Beautifully.",
+            "homepage": "https://woocommerce.com/",
+            "time": "2020-05-05T18:33:00+00:00"
+        },
+        {
+            "name": "woocommerce/woocommerce-admin",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/woocommerce/woocommerce-admin.git",
+                "reference": "ac862f831eced0e6a3692539a24c738d5aafc4ee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/woocommerce/woocommerce-admin/zipball/ac862f831eced0e6a3692539a24c738d5aafc4ee",
+                "reference": "ac862f831eced0e6a3692539a24c738d5aafc4ee",
+                "shasum": ""
+            },
+            "require": {
+                "automattic/jetpack-autoloader": "^1.6.0",
+                "composer/installers": "1.7.0",
+                "php": ">=5.6|>=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "7.5.20",
+                "woocommerce/woocommerce-sniffs": "0.0.9"
+            },
+            "type": "wordpress-plugin",
+            "extra": {
+                "scripts-description": {
+                    "test": "Run unit tests",
+                    "phpcs": "Analyze code against the WordPress coding standards with PHP_CodeSniffer",
+                    "phpcbf": "Fix coding standards warnings/errors automatically with PHP Code Beautifier"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "includes/"
+                ],
+                "psr-4": {
+                    "Automattic\\WooCommerce\\Admin\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "description": "A modern, javascript-driven WooCommerce Admin experience.",
+            "homepage": "https://github.com/woocommerce/woocommerce-admin",
+            "time": "2020-05-05T14:47:41+00:00"
+        },
+        {
+            "name": "woocommerce/woocommerce-blocks",
+            "version": "v2.5.16",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/woocommerce/woocommerce-gutenberg-products-block.git",
+                "reference": "3bd91b669247000fd3f5277954701d0b148d3f1a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/woocommerce/woocommerce-gutenberg-products-block/zipball/3bd91b669247000fd3f5277954701d0b148d3f1a",
+                "reference": "3bd91b669247000fd3f5277954701d0b148d3f1a",
+                "shasum": ""
+            },
+            "require": {
+                "automattic/jetpack-autoloader": "^1.6.0",
+                "composer/installers": "1.7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "6.5.14",
+                "woocommerce/woocommerce-sniffs": "0.0.7"
+            },
+            "type": "wordpress-plugin",
+            "extra": {
+                "scripts-description": {
+                    "phpcs": "Analyze code against the WordPress coding standards with PHP_CodeSniffer",
+                    "phpcbf": "Fix coding standards warnings/errors automatically with PHP Code Beautifier"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Automattic\\WooCommerce\\Blocks\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "description": "WooCommerce blocks for the Gutenberg editor.",
+            "homepage": "https://woocommerce.com/",
+            "keywords": [
+                "blocks",
+                "gutenberg",
+                "woocommerce"
+            ],
+            "time": "2020-04-07T11:47:19+00:00"
+        },
+        {
+            "name": "woocommerce/woocommerce-rest-api",
+            "version": "1.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/woocommerce/woocommerce-rest-api.git",
+                "reference": "49162ec26a25bd0c6efc0f3452b113cdfff0a823"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/woocommerce/woocommerce-rest-api/zipball/49162ec26a25bd0c6efc0f3452b113cdfff0a823",
+                "reference": "49162ec26a25bd0c6efc0f3452b113cdfff0a823",
+                "shasum": ""
+            },
+            "require": {
+                "automattic/jetpack-autoloader": "^1.2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "6.5.14",
+                "woocommerce/woocommerce-sniffs": "0.0.9"
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "classmap": [
+                    "src/Controllers/Version1",
+                    "src/Controllers/Version2",
+                    "src/Controllers/Version3"
+                ],
+                "psr-4": {
+                    "Automattic\\WooCommerce\\RestApi\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "description": "The WooCommerce core REST API.",
+            "homepage": "https://github.com/woocommerce/woocommerce-rest-api",
+            "time": "2020-01-28T21:04:51+00:00"
         }
     ],
     "packages-dev": [
@@ -567,12 +1081,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "09afa996c68c18f49e6487b06adcb2ef27da61fa"
+                "reference": "ec1a75b10126327b351fdea7c2b9bfb94e2f6f35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/09afa996c68c18f49e6487b06adcb2ef27da61fa",
-                "reference": "09afa996c68c18f49e6487b06adcb2ef27da61fa",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/ec1a75b10126327b351fdea7c2b9bfb94e2f6f35",
+                "reference": "ec1a75b10126327b351fdea7c2b9bfb94e2f6f35",
                 "shasum": ""
             },
             "conflict": {
@@ -585,6 +1099,7 @@
                 "asymmetricrypt/asymmetricrypt": ">=0,<9.9.99",
                 "aws/aws-sdk-php": ">=3,<3.2.1",
                 "bagisto/bagisto": "<0.1.5",
+                "barrelstrength/sprout-base-email": "<3.9",
                 "bolt/bolt": "<3.6.10",
                 "brightlocal/phpwhois": "<=4.2.5",
                 "buddypress/buddypress": "<5.1.2",
@@ -618,6 +1133,8 @@
                 "endroid/qr-code-bundle": "<3.4.2",
                 "enshrined/svg-sanitize": "<0.13.1",
                 "erusev/parsedown": "<1.7.2",
+                "ezsystems/demobundle": ">=5.4,<5.4.6.1",
+                "ezsystems/ezdemo-ls-extension": ">=5.4,<5.4.2.1",
                 "ezsystems/ezfind-ls": ">=5.3,<5.3.6.1|>=5.4,<5.4.11.1|>=2017.12,<2017.12.0.1",
                 "ezsystems/ezplatform": ">=1.7,<1.7.9.1|>=1.13,<1.13.5.1|>=2.5,<2.5.4",
                 "ezsystems/ezplatform-admin-ui": ">=1.3,<1.3.5|>=1.4,<1.4.6",
@@ -660,6 +1177,7 @@
                 "magento/product-community-edition": ">=2,<2.2.10|>=2.3,<2.3.2-p.2",
                 "monolog/monolog": ">=1.8,<1.12",
                 "namshi/jose": "<2.2",
+                "nzo/url-encryptor-bundle": ">=4,<4.3.2|>=5,<5.0.1",
                 "onelogin/php-saml": "<2.10.4",
                 "oneup/uploader-bundle": "<1.9.3|>=2,<2.1.5",
                 "openid/php-openid": "<2.3",
@@ -706,7 +1224,7 @@
                 "silverstripe/userforms": "<3",
                 "simple-updates/phpwhois": "<=1",
                 "simplesamlphp/saml2": "<1.10.6|>=2,<2.3.8|>=3,<3.1.4",
-                "simplesamlphp/simplesamlphp": "<1.18.4",
+                "simplesamlphp/simplesamlphp": "<1.18.6",
                 "simplesamlphp/simplesamlphp-module-infocard": "<1.0.1",
                 "simplito/elliptic-php": "<1.0.6",
                 "slim/slim": "<2.6",
@@ -714,7 +1232,7 @@
                 "socalnick/scn-social-auth": "<1.15.2",
                 "spoonity/tcpdf": "<6.2.22",
                 "squizlabs/php_codesniffer": ">=1,<2.8.1|>=3,<3.0.1",
-                "ssddanbrown/bookstack": "<0.25.3",
+                "ssddanbrown/bookstack": "<0.29.2",
                 "stormpath/sdk": ">=0,<9.9.99",
                 "studio-42/elfinder": "<2.1.49",
                 "swiftmailer/swiftmailer": ">=4,<5.4.5",
@@ -823,7 +1341,17 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2020-04-15T04:56:51+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/Ocramius",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/roave/security-advisories",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-05-09T00:00:21+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
