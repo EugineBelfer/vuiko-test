@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Май 19 2020 г., 19:32
+-- Время создания: Май 19 2020 г., 19:58
 -- Версия сервера: 10.4.11-MariaDB
 -- Версия PHP: 7.4.4
 
@@ -337,7 +337,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (104, 'sidebars_widgets', 'a:18:{s:19:\"wp_inactive_widgets\";a:0:{}s:12:\"blog-sidebar\";a:3:{i:0;s:8:\"search-2\";i:1;s:14:\"recent-posts-2\";i:2;s:17:\"recent-comments-2\";}s:11:\"topbar-left\";a:0:{}s:12:\"topbar-right\";a:0:{}s:13:\"topbar-mobile\";a:0:{}s:10:\"header-bar\";a:0:{}s:12:\"post-sidebar\";a:3:{i:0;s:10:\"archives-2\";i:1;s:12:\"categories-2\";i:2;s:6:\"meta-2\";}s:12:\"page-sidebar\";a:0:{}s:15:\"catalog-sidebar\";a:0:{}s:15:\"product-sidebar\";a:0:{}s:12:\"footer-links\";a:0:{}s:16:\"footer-sidebar-1\";a:0:{}s:16:\"footer-sidebar-2\";a:0:{}s:16:\"footer-sidebar-3\";a:0:{}s:16:\"footer-sidebar-4\";a:0:{}s:16:\"footer-sidebar-5\";a:0:{}s:16:\"footer-sidebar-6\";a:0:{}s:13:\"array_version\";i:3;}', 'yes'),
 (105, 'bedrock_autoloader', 'a:2:{s:7:\"plugins\";a:0:{}s:5:\"count\";i:0;}', 'no');
 INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`) VALUES
-(106, 'cron', 'a:17:{i:1589909512;a:1:{s:26:\"action_scheduler_run_queue\";a:1:{s:32:\"0d04ed39571b55704c122d726248bbac\";a:3:{s:8:\"schedule\";s:12:\"every_minute\";s:4:\"args\";a:1:{i:0;s:7:\"WP Cron\";}s:8:\"interval\";i:60;}}}i:1589909707;a:1:{s:28:\"woocommerce_cleanup_sessions\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1589909717;a:1:{s:33:\"wc_admin_process_orders_milestone\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1589909788;a:1:{s:29:\"wc_admin_unsnooze_admin_notes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1589910314;a:1:{s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1589912950;a:1:{s:32:\"woocommerce_cancel_unpaid_orders\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:2:{s:8:\"schedule\";b:0;s:4:\"args\";a:0:{}}}}i:1589932800;a:1:{s:27:\"woocommerce_scheduled_sales\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1589949914;a:3:{s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1589974510;a:1:{s:14:\"wc_admin_daily\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1589974517;a:2:{s:33:\"woocommerce_cleanup_personal_data\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:30:\"woocommerce_tracker_send_event\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1589985307;a:1:{s:24:\"woocommerce_cleanup_logs\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1589993114;a:1:{s:32:\"recovery_mode_clean_expired_keys\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1589993127;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1589993129;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1590338714;a:1:{s:30:\"wp_site_health_scheduled_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"weekly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:604800;}}}i:1590492967;a:1:{s:25:\"woocommerce_geoip_updater\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:11:\"fifteendays\";s:4:\"args\";a:0:{}s:8:\"interval\";i:1296000;}}}s:7:\"version\";i:2;}', 'yes'),
+(106, 'cron', 'a:17:{i:1589911072;a:1:{s:26:\"action_scheduler_run_queue\";a:1:{s:32:\"0d04ed39571b55704c122d726248bbac\";a:3:{s:8:\"schedule\";s:12:\"every_minute\";s:4:\"args\";a:1:{i:0;s:7:\"WP Cron\";}s:8:\"interval\";i:60;}}}i:1589912950;a:1:{s:32:\"woocommerce_cancel_unpaid_orders\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:2:{s:8:\"schedule\";b:0;s:4:\"args\";a:0:{}}}}i:1589913317;a:1:{s:33:\"wc_admin_process_orders_milestone\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1589913388;a:1:{s:29:\"wc_admin_unsnooze_admin_notes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1589913914;a:1:{s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1589932800;a:1:{s:27:\"woocommerce_scheduled_sales\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1589949914;a:3:{s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1589952907;a:1:{s:28:\"woocommerce_cleanup_sessions\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1589974510;a:1:{s:14:\"wc_admin_daily\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1589974517;a:2:{s:33:\"woocommerce_cleanup_personal_data\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:30:\"woocommerce_tracker_send_event\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1589985307;a:1:{s:24:\"woocommerce_cleanup_logs\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1589993114;a:1:{s:32:\"recovery_mode_clean_expired_keys\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1589993127;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1589993129;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1590338714;a:1:{s:30:\"wp_site_health_scheduled_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"weekly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:604800;}}}i:1590492967;a:1:{s:25:\"woocommerce_geoip_updater\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:11:\"fifteendays\";s:4:\"args\";a:0:{}s:8:\"interval\";i:1296000;}}}s:7:\"version\";i:2;}', 'yes'),
 (107, 'widget_pages', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (108, 'widget_calendar', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (109, 'widget_media_audio', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
@@ -483,15 +483,11 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (284, 'woocommerce_onboarding_opt_in', 'yes', 'yes'),
 (287, 'woocommerce_admin_version', '1.1.1', 'yes'),
 (288, 'woocommerce_admin_install_timestamp', '1589055835', 'yes'),
-(293, 'action_scheduler_lock_async-request-runner', '1589909524', 'yes'),
+(293, 'action_scheduler_lock_async-request-runner', '1589911107', 'yes'),
 (294, 'woocommerce_admin_last_orders_milestone', '0', 'yes'),
 (295, 'woocommerce_meta_box_errors', 'a:0:{}', 'yes'),
 (296, 'woocommerce_onboarding_profile', 'a:9:{s:9:\"completed\";b:1;s:12:\"setup_client\";b:0;s:8:\"industry\";a:1:{i:0;a:1:{s:4:\"slug\";s:10:\"food-drink\";}}s:13:\"product_types\";a:1:{i:0;s:8:\"physical\";}s:13:\"product_count\";s:5:\"1000+\";s:14:\"selling_venues\";s:2:\"no\";s:19:\"business_extensions\";a:0:{}s:5:\"theme\";s:8:\"martfury\";s:7:\"plugins\";s:7:\"skipped\";}', 'yes'),
 (298, '_transient_wc_count_comments', 'O:8:\"stdClass\":7:{s:14:\"total_comments\";i:1;s:3:\"all\";i:1;s:8:\"approved\";s:1:\"1\";s:9:\"moderated\";i:0;s:4:\"spam\";i:0;s:5:\"trash\";i:0;s:12:\"post-trashed\";i:0;}', 'yes'),
-(299, '_transient_timeout_wc_low_stock_count', '1591647977', 'no'),
-(300, '_transient_wc_low_stock_count', '0', 'no'),
-(301, '_transient_timeout_wc_outofstock_count', '1591647977', 'no'),
-(302, '_transient_wc_outofstock_count', '0', 'no'),
 (319, 'template_root', '/themes', 'yes'),
 (320, 'stylesheet_root', '/themes', 'yes'),
 (321, 'current_theme', 'Martfury Child', 'yes'),
@@ -619,7 +615,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (1040, 'wcfm_store_hours_options', 'a:1:{s:9:\"day_times\";a:7:{i:0;a:1:{i:0;a:2:{s:5:\"start\";s:0:\"\";s:3:\"end\";s:0:\"\";}}i:1;a:1:{i:0;a:2:{s:5:\"start\";s:0:\"\";s:3:\"end\";s:0:\"\";}}i:2;a:1:{i:0;a:2:{s:5:\"start\";s:0:\"\";s:3:\"end\";s:0:\"\";}}i:3;a:1:{i:0;a:2:{s:5:\"start\";s:0:\"\";s:3:\"end\";s:0:\"\";}}i:4;a:1:{i:0;a:2:{s:5:\"start\";s:0:\"\";s:3:\"end\";s:0:\"\";}}i:5;a:1:{i:0;a:2:{s:5:\"start\";s:0:\"\";s:3:\"end\";s:0:\"\";}}i:6;a:1:{i:0;a:2:{s:5:\"start\";s:0:\"\";s:3:\"end\";s:0:\"\";}}}}', 'yes'),
 (1041, 'wcfm_data_cleanup_options', 'a:3:{s:31:\"messages_data_cleanup_more_than\";s:2:\"90\";s:30:\"inquiry_data_cleanup_more_than\";s:2:\"90\";s:32:\"analytics_data_cleanup_more_than\";s:2:\"90\";}', 'yes'),
 (1043, 'wcfm_updated_end_point_sell_items_catalog', '1', 'yes'),
-(1530, '_transient_product_query-transient-version', '1589748131', 'yes'),
+(1530, '_transient_product_query-transient-version', '1589910989', 'yes'),
 (1537, 'wcfm_capability_options', 'a:1:{s:11:\"vnd_wpadmin\";s:3:\"yes\";}', 'yes'),
 (2580, '_transient_wcfm-notification-message-0', '3', 'yes'),
 (7087, '_site_transient_timeout_php_check_141a8d7da406be785ba26084a46e1c00', '1590338719', 'no'),
@@ -632,7 +628,6 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (7290, '_site_transient_timeout_kirki_googlefonts_cache', '1589995747', 'no'),
 (7291, '_transient_timeout_kirki_remote_url_contents', '1590514151', 'no'),
 (7292, '_transient_kirki_remote_url_contents', 'a:1:{s:32:\"4376419d0d30df9cd9b8c45f53928890\";s:3450:\"/* vietnamese */\n@font-face {\n  font-family: \'Work Sans\';\n  font-style: normal;\n  font-weight: 400;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/worksans/v7/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32K0nXBiAJoI3ZKyHaQfhf.woff) format(\'woff\');\n  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;\n}\n/* latin-ext */\n@font-face {\n  font-family: \'Work Sans\';\n  font-style: normal;\n  font-weight: 400;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/worksans/v7/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32K0nXBiEJoI3ZKyHaQfhf.woff) format(\'woff\');\n  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;\n}\n/* latin */\n@font-face {\n  font-family: \'Work Sans\';\n  font-style: normal;\n  font-weight: 400;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/worksans/v7/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32K0nXBi8JoI3ZKyHaQQ.woff) format(\'woff\');\n  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;\n}\n/* vietnamese */\n@font-face {\n  font-family: \'Work Sans\';\n  font-style: normal;\n  font-weight: 600;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/worksans/v7/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32K5fQBiAJoI3ZKyHaQfhf.woff) format(\'woff\');\n  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;\n}\n/* latin-ext */\n@font-face {\n  font-family: \'Work Sans\';\n  font-style: normal;\n  font-weight: 600;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/worksans/v7/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32K5fQBiEJoI3ZKyHaQfhf.woff) format(\'woff\');\n  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;\n}\n/* latin */\n@font-face {\n  font-family: \'Work Sans\';\n  font-style: normal;\n  font-weight: 600;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/worksans/v7/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32K5fQBi8JoI3ZKyHaQQ.woff) format(\'woff\');\n  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;\n}\n/* vietnamese */\n@font-face {\n  font-family: \'Work Sans\';\n  font-style: normal;\n  font-weight: 700;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/worksans/v7/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32K67QBiAJoI3ZKyHaQfhf.woff) format(\'woff\');\n  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;\n}\n/* latin-ext */\n@font-face {\n  font-family: \'Work Sans\';\n  font-style: normal;\n  font-weight: 700;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/worksans/v7/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32K67QBiEJoI3ZKyHaQfhf.woff) format(\'woff\');\n  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;\n}\n/* latin */\n@font-face {\n  font-family: \'Work Sans\';\n  font-style: normal;\n  font-weight: 700;\n  font-display: swap;\n  src: url(https://fonts.gstatic.com/s/worksans/v7/QGY_z_wNahGAdqQ43RhVcIgYT2Xz5u32K67QBi8JoI3ZKyHaQQ.woff) format(\'woff\');\n  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;\n}\n\";}', 'no'),
-(7293, '_transient_is_multi_author', '0', 'yes'),
 (7294, '_transient_timeout_external_ip_address_127.0.0.1', '1590514152', 'no'),
 (7295, '_transient_external_ip_address_127.0.0.1', '176.37.166.183', 'no'),
 (7296, '_transient_timeout__woocommerce_helper_subscriptions', '1589910254', 'no'),
@@ -640,7 +635,9 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (7298, '_site_transient_timeout_theme_roots', '1589911154', 'no'),
 (7299, '_site_transient_theme_roots', 'a:12:{s:14:\"martfury-child\";s:7:\"/themes\";s:8:\"martfury\";s:7:\"/themes\";s:12:\"twentyeleven\";s:57:\"E:\\XAMPP\\htdocs\\vuiko-wp\\bedrock\\web\\wp/wp-content/themes\";s:13:\"twentyfifteen\";s:57:\"E:\\XAMPP\\htdocs\\vuiko-wp\\bedrock\\web\\wp/wp-content/themes\";s:14:\"twentyfourteen\";s:57:\"E:\\XAMPP\\htdocs\\vuiko-wp\\bedrock\\web\\wp/wp-content/themes\";s:14:\"twentynineteen\";s:57:\"E:\\XAMPP\\htdocs\\vuiko-wp\\bedrock\\web\\wp/wp-content/themes\";s:15:\"twentyseventeen\";s:57:\"E:\\XAMPP\\htdocs\\vuiko-wp\\bedrock\\web\\wp/wp-content/themes\";s:13:\"twentysixteen\";s:57:\"E:\\XAMPP\\htdocs\\vuiko-wp\\bedrock\\web\\wp/wp-content/themes\";s:9:\"twentyten\";s:57:\"E:\\XAMPP\\htdocs\\vuiko-wp\\bedrock\\web\\wp/wp-content/themes\";s:14:\"twentythirteen\";s:57:\"E:\\XAMPP\\htdocs\\vuiko-wp\\bedrock\\web\\wp/wp-content/themes\";s:12:\"twentytwelve\";s:57:\"E:\\XAMPP\\htdocs\\vuiko-wp\\bedrock\\web\\wp/wp-content/themes\";s:12:\"twentytwenty\";s:57:\"E:\\XAMPP\\htdocs\\vuiko-wp\\bedrock\\web\\wp/wp-content/themes\";}', 'no'),
 (7301, '_transient_timeout__woocommerce_helper_updates', '1589952555', 'no'),
-(7302, '_transient__woocommerce_helper_updates', 'a:4:{s:4:\"hash\";s:32:\"d751713988987e9331980363e24189ce\";s:7:\"updated\";i:1589909355;s:8:\"products\";a:0:{}s:6:\"errors\";a:1:{i:0;s:10:\"http-error\";}}', 'no');
+(7302, '_transient__woocommerce_helper_updates', 'a:4:{s:4:\"hash\";s:32:\"d751713988987e9331980363e24189ce\";s:7:\"updated\";i:1589909355;s:8:\"products\";a:0:{}s:6:\"errors\";a:1:{i:0;s:10:\"http-error\";}}', 'no'),
+(7330, '_transient_product-transient-version', '1589910990', 'yes'),
+(7332, '_transient_is_multi_author', '0', 'yes');
 
 -- --------------------------------------------------------
 
@@ -692,7 +689,35 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (30, 21, 'exclude_sale_items', 'no'),
 (31, 21, 'show_on_store', 'no'),
 (32, 21, 'sc_is_visible_storewide', 'yes'),
-(33, 1, '_wcfm_article_views', '1');
+(33, 1, '_wcfm_article_views', '1'),
+(34, 23, '_wcfm_product_author', '1'),
+(35, 23, 'total_sales', '0'),
+(36, 23, '_tax_status', 'taxable'),
+(37, 23, '_tax_class', ''),
+(38, 23, '_manage_stock', 'no'),
+(39, 23, '_backorders', 'no'),
+(40, 23, '_sold_individually', 'no'),
+(41, 23, '_virtual', 'no'),
+(42, 23, '_downloadable', 'no'),
+(43, 23, '_download_limit', '-1'),
+(44, 23, '_download_expiry', '-1'),
+(45, 23, '_stock', NULL),
+(46, 23, '_stock_status', 'instock'),
+(47, 23, '_wc_average_rating', '0'),
+(48, 23, '_wc_review_count', '0'),
+(49, 23, '_product_version', '4.1.0'),
+(50, 23, '_product_image_gallery', ''),
+(51, 23, '_catalog', 'no'),
+(52, 23, 'disable_add_to_cart', 'no'),
+(53, 23, 'disable_price', 'no'),
+(54, 23, '_wcfmmp_processing_time', ''),
+(55, 23, 'wcfm_policy_product_options', 'a:4:{i:0;s:0:\"\";s:15:\"shipping_policy\";s:11:\"<p><br></p>\";s:13:\"refund_policy\";s:11:\"<p><br></p>\";s:19:\"cancellation_policy\";s:11:\"<p><br></p>\";}'),
+(56, 23, 'mf_pbt_product_ids', 'a:0:{}'),
+(57, 23, 'video_url', ''),
+(58, 23, 'video_thumbnail', '0'),
+(59, 23, 'video_position', '1'),
+(60, 23, 'product_360_view', ''),
+(61, 23, '_wcfmmp_commission', 'a:5:{s:15:\"commission_mode\";s:6:\"global\";s:18:\"commission_percent\";s:0:\"\";s:16:\"commission_fixed\";s:0:\"\";s:8:\"tax_name\";s:0:\"\";s:11:\"tax_percent\";s:0:\"\";}');
 
 -- --------------------------------------------------------
 
@@ -750,7 +775,8 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (18, 1, '2020-05-11 14:31:45', '2020-05-11 14:31:45', '[wc_frontend_manager]', 'Store Manager', '', 'inherit', 'closed', 'closed', '', '13-revision-v1', '', '', '2020-05-11 14:31:45', '2020-05-11 14:31:45', '', 13, 'http://vuiko.local/2020/05/11/13-revision-v1/', 0, 'revision', '', 0),
 (19, 1, '2020-05-11 14:47:20', '2020-05-11 14:47:20', '[wcfm_vendor_registration]', 'Vendor Registration', '', 'inherit', 'closed', 'closed', '', '17-revision-v1', '', '', '2020-05-11 14:47:20', '2020-05-11 14:47:20', '', 17, 'http://vuiko.local/2020/05/11/17-revision-v1/', 0, 'revision', '', 0),
 (21, 1, '2020-05-13 09:26:59', '2020-05-13 09:26:59', '', 'tttt', 'dkjfkdjf', 'publish', 'closed', 'closed', '', 'tttt', '', '', '2020-05-13 09:26:59', '2020-05-13 09:26:59', '', 0, 'http://vuiko.local/?post_type=shop_coupon&p=21', 0, 'shop_coupon', '', 0),
-(22, 1, '2020-05-17 20:42:11', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2020-05-17 20:42:11', '0000-00-00 00:00:00', '', 0, 'http://vuiko.local/?p=22', 0, 'post', '', 0);
+(22, 1, '2020-05-17 20:42:11', '0000-00-00 00:00:00', '', 'Auto Draft', '', 'auto-draft', 'open', 'open', '', '', '', '', '2020-05-17 20:42:11', '0000-00-00 00:00:00', '', 0, 'http://vuiko.local/?p=22', 0, 'post', '', 0),
+(23, 1, '2020-05-19 17:56:28', '2020-05-19 17:56:28', '', 'Картофель', '', 'publish', 'open', 'closed', '', '%d0%ba%d0%b0%d1%80%d1%82%d0%be%d1%84%d0%b5%d0%bb%d1%8c', '', '', '2020-05-19 17:56:29', '2020-05-19 17:56:29', '', 0, 'http://vuiko.local/product/%d0%ba%d0%b0%d1%80%d1%82%d0%be%d1%84%d0%b5%d0%bb%d1%8c/', 0, 'product', '', 0);
 
 -- --------------------------------------------------------
 
@@ -843,7 +869,8 @@ CREATE TABLE `wp_term_relationships` (
 --
 
 INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_order`) VALUES
-(1, 1, 0);
+(1, 1, 0),
+(23, 2, 0);
 
 -- --------------------------------------------------------
 
@@ -866,7 +893,7 @@ CREATE TABLE `wp_term_taxonomy` (
 
 INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `description`, `parent`, `count`) VALUES
 (1, 1, 'category', '', 0, 1),
-(2, 2, 'product_type', '', 0, 0),
+(2, 2, 'product_type', '', 0, 1),
 (3, 3, 'product_type', '', 0, 0),
 (4, 4, 'product_type', '', 0, 0),
 (5, 5, 'product_type', '', 0, 0),
@@ -1959,6 +1986,13 @@ CREATE TABLE `wp_wc_product_meta_lookup` (
   `tax_class` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Дамп данных таблицы `wp_wc_product_meta_lookup`
+--
+
+INSERT INTO `wp_wc_product_meta_lookup` (`product_id`, `sku`, `virtual`, `downloadable`, `min_price`, `max_price`, `onsale`, `stock_quantity`, `stock_status`, `rating_count`, `average_rating`, `total_sales`, `tax_status`, `tax_class`) VALUES
+(23, '', 0, 0, '0.0000', '0.0000', 0, NULL, 'instock', 0, '0.00', 0, 'taxable', '');
+
 -- --------------------------------------------------------
 
 --
@@ -2793,7 +2827,7 @@ ALTER TABLE `wp_actionscheduler_actions`
 -- AUTO_INCREMENT для таблицы `wp_actionscheduler_claims`
 --
 ALTER TABLE `wp_actionscheduler_claims`
-  MODIFY `claim_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2160;
+  MODIFY `claim_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2162;
 
 --
 -- AUTO_INCREMENT для таблицы `wp_actionscheduler_groups`
@@ -2829,19 +2863,19 @@ ALTER TABLE `wp_links`
 -- AUTO_INCREMENT для таблицы `wp_options`
 --
 ALTER TABLE `wp_options`
-  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7323;
+  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7342;
 
 --
 -- AUTO_INCREMENT для таблицы `wp_postmeta`
 --
 ALTER TABLE `wp_postmeta`
-  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 
 --
 -- AUTO_INCREMENT для таблицы `wp_posts`
 --
 ALTER TABLE `wp_posts`
-  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT для таблицы `wp_termmeta`
