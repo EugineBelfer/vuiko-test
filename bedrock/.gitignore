@@ -13,8 +13,8 @@ web/wp
 *.log
 
 # Dotenv
-.env
-.env.*
+!.env
+!.env.*
 !.env.example
 
 # Composer
