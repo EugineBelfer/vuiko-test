@@ -162,7 +162,7 @@
         }
 
         var scrollTop = 0,
-            $hmain = martfury.$header.find('.header-main-wapper'),
+            $hmain = martfury.$header.find('.header-main'),
             heightMain = $hmain.outerHeight() - 18,
             $promotion = $('#top-promotion'),
             hPromotion = $promotion.length > 0 ? $promotion.outerHeight(true) : 0,
@@ -183,12 +183,12 @@
             }
             if (martfury.$window.scrollTop() > scrollTop) {
                 martfury.$header.addClass('minimized');
-                $hmain.css({
+                martfury.$header.css({
                     'padding-top': heightMain
                 });
             } else {
                 martfury.$header.removeClass('minimized');
-                $hmain.removeAttr('style');
+                martfury.$header.removeAttr('style');
             }
         });
 
@@ -472,7 +472,7 @@
 
     martfury.headerMenu = function () {
 
-        if (martfury.$body.hasClass('header-layout-3') || martfury.$body.hasClass('header-layout-1')) {
+        if (martfury.$header.hasClass('header-department-bot') ) {
             return;
         }
 
@@ -789,14 +789,14 @@
             var $this = $(this),
                 $qty = $this.siblings('.qty'),
                 current = 0,
-                min = parseInt($qty.attr('min'), 10),
-                max = parseInt($qty.attr('max'), 10),
+                min = parseFloat($qty.attr('min')),
+                max = parseFloat($qty.attr('max')),
                 step = parseFloat($qty.attr('step'));
 
             if ($qty.val() !== '') {
-                current = parseInt($qty.val(), 10);
+                current = parseFloat($qty.val());
             } else if ($qty.attr('placeholder') !== '') {
-                current = parseInt($qty.attr('placeholder'), 10)
+                current = parseFloat($qty.attr('placeholder'))
             }
 
             min = min ? min : 1;
@@ -2775,6 +2775,8 @@
                 $(document.body).trigger('martfury_ajax_filter_request_success', [res, url]);
 
                 $(document.body).trigger('jetpack-lazy-images-load');
+
+                $(document.body).trigger('yith_wcwl_init');
 
             }, 'html');
 

@@ -186,17 +186,20 @@ if ( ! function_exists( 'martfury_comment_form_fields' ) ) :
 	function martfury_comment_form_fields() {
 		global $commenter, $aria_req;
 
+		$comment_author = isset($commenter['comment_author']) ? $commenter['comment_author'] : '';
+		$comment_author_email = isset($commenter['comment_author_email']) ? $commenter['comment_author_email'] : '';
+		$comment_author_url = isset($commenter['comment_author_url']) ? $commenter['comment_author_url'] : '';
 		$fields = array(
 			'author' => '<p class="comment-form-author col-md-6 col-sm-12">' .
-			            '<input id ="author" placeholder="' . esc_html__( 'Name', 'martfury' ) . ' " name="author" type="text" required value="' . esc_attr( $commenter['comment_author'] ) .
+			            '<input id ="author" placeholder="' . esc_html__( 'Name', 'martfury' ) . ' " name="author" type="text" required value="' . esc_attr( $comment_author ) .
 			            '" size    ="30"' . $aria_req . ' /></p>',
 
 			'email' => '<p class="comment-form-email col-md-6 col-sm-12">' .
-			           '<input id ="email" placeholder="' . esc_html__( 'Email', 'martfury' ) . '"name="email" type="email" required value="' . esc_attr( $commenter['comment_author_email'] ) .
+			           '<input id ="email" placeholder="' . esc_html__( 'Email', 'martfury' ) . '"name="email" type="email" required value="' . esc_attr( $comment_author_email ) .
 			           '" size    ="30"' . $aria_req . ' /></p>',
 
 			'url' => '<p class="comment-form-url col-md-12 col-sm-12">' .
-			         '<input id ="url" placeholder="' . esc_html__( 'Website', 'martfury' ) . '"name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
+			         '<input id ="url" placeholder="' . esc_html__( 'Website', 'martfury' ) . '"name="url" type="text" value="' . esc_attr( $comment_author_url ) .
 			         '" size    ="30" /></p>'
 		);
 

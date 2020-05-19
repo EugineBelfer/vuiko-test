@@ -12,7 +12,7 @@
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce/Templates
- * @version 3.6.0
+ * @version 4.1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -92,7 +92,7 @@ if ( $login_form_layout == 'promotion' ) {
                                         <span><?php esc_html_e( 'Remember me', 'martfury' ); ?></span>
                                      </label>
                                    <a class="lost-password"
-                                      href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Forgot?', 'martfury' ); ?></a>
+                                      href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Forgot Password?', 'martfury' ); ?></a>
                                 </span>
 
 								<?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
@@ -153,7 +153,7 @@ if ( $login_form_layout == 'promotion' ) {
 
 								<?php do_action( 'woocommerce_register_form' ); ?>
 
-                                <p class="woocommerce-FormRow form-row">
+                                <p class="woocommerce-form-row form-row">
 									<?php wp_nonce_field( 'woocommerce-register', 'woocommerce-register-nonce' ); ?>
                                     <button type="submit" class="woocommerce-Button button" name="register"
                                             value="<?php esc_attr_e( 'Register', 'martfury' ); ?>"><?php esc_html_e( 'Register', 'martfury' ); ?></button>

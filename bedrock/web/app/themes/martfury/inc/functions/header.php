@@ -728,10 +728,10 @@ if ( ! function_exists( 'martfury_extra_department' ) ) :
 			$dep_text .= '<span class="text">' . martfury_get_option( 'custom_department_text' ) . '</span>';
 		}
 
-		$dep_open = 'close';
+		$dep_open = 'mf-closed';
 
 		if ( $dep_close && martfury_is_homepage() ) {
-			$dep_open = martfury_get_option( 'department_open_homepage' );
+			$dep_open = martfury_get_option( 'department_open_homepage' ) == 'open' ? 'open' : $dep_open;
 		}
 		$cat_style = '';
 		$space     = martfury_get_option( 'department_space_2_homepage' );
@@ -969,7 +969,7 @@ function martfury_get_color_scheme_css( $colors, $darken_color ) {
 	.mf-newsletter-popup .newletter-content .mc4wp-form input[type="submit"],
 	.site-header .products-search .search-submit,
 	.site-header .extras-menu > li > a .mini-item-counter,
-	.header-layout-1 .site-header .products-cats-menu:before,
+	.header-department-bot .mr-extra-department .products-cats-menu:before,
 	.header-layout-2 .site-header .main-menu,
 	.header-layout-3 .site-header,
 	.header-layout-3 .site-header .header-main,
@@ -1044,8 +1044,8 @@ function martfury_get_color_scheme_css( $colors, $darken_color ) {
 	}
 	
 	.widget_shopping_cart_content .woocommerce-mini-cart__buttons .checkout,
-	 .header-layout-4 .topbar,
-	 .header-layout-3 .topbar{
+	 .header-layout-4 .topbar:not(.header-bar),
+	 .header-layout-3 .topbar:not(.header-bar){
 		background-color: {$darken_color};
 	}
 
@@ -1117,6 +1117,30 @@ function martfury_header_class() {
 		}
 	}
 
+	if ( in_array( martfury_get_option( 'header_layout' ), array( '1', '3', '7' ) ) ) {
+		$classes[] = 'header-department-bot';
+	} elseif ( in_array( martfury_get_option( 'header_layout' ), array( '2', '4', '5', '6' ) ) ) {
+		$classes[] = 'header-department-top';
+	}
+
+	if ( in_array( martfury_get_option( 'header_layout' ), array( '3', '4', '7' ) ) ) {
+		$classes[] = 'header-dark';
+	} elseif ( in_array( martfury_get_option( 'header_layout' ), array( '5' ) ) ) {
+		$classes[] = 'header-light';
+	}
+
+
+	echo implode( ' ', $classes );
+}
+
+function martfury_topbar_classes() {
+	$classes = array();
+
+	if ( in_array( martfury_get_option( 'header_layout' ), array( '3', '4', '7' ) ) ) {
+		$classes[] = 'topbar-dark';
+	} elseif ( in_array( martfury_get_option( 'header_layout' ), array( '5' ) ) ) {
+		$classes[] = 'topbar-light';
+	}
 
 	echo implode( ' ', $classes );
 }

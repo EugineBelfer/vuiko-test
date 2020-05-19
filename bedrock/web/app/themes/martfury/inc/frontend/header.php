@@ -540,7 +540,7 @@ function martfury_get_header_style() {
 
 	$topbar_text_color = martfury_get_option( 'topbar_text_color' );
 	if ( ! empty( $topbar_text_color ) ) {
-		$inline_css .= '#topbar, #topbar a, #topbar #lang_sel > ul > li > a, #topbar .mf-currency-widget .current:after, #topbar  .lang_sel > ul > li > a:after, #topbar  #lang_sel > ul > li > a:after {color:' . $topbar_text_color . '}';
+		$inline_css .= '#topbar, #topbar a, #topbar #lang_sel > ul > li > a, #topbar .mf-currency-widget .current, #topbar .mf-currency-widget .current:after, #topbar  .lang_sel > ul > li > a:after, #topbar  #lang_sel > ul > li > a:after {color:' . $topbar_text_color . '}';
 	}
 
 	$topbar_hover_color = martfury_get_option( 'topbar_hover_color' );
@@ -568,7 +568,7 @@ function martfury_get_header_style() {
 	$menubar_text_color = martfury_get_option( 'menu_bar_text_color' );
 	if ( ! empty( $menubar_text_color ) ) {
 		$inline_css .= '#site-header .header-bar a, #site-header .recently-viewed .recently-title,#site-header:not(.minimized) .main-menu .products-cats-menu .cats-menu-title .text, #site-header:not(.minimized) .main-menu .products-cats-menu .cats-menu-title, #site-header .main-menu .primary-nav > ul > li > a, #site-header .main-menu .header-bar,' .
-		               '#site-header .header-bar #lang_sel  > ul > li > a, #site-header .header-bar .lang_sel > ul > li > a, #site-header .header-bar #lang_sel > ul > li > a:after, #site-header .header-bar .lang_sel > ul > li > a:after, #site-header .header-bar .mf-currency-widget .current:after{color:' . $menubar_text_color . '}';
+		               '#site-header .header-bar #lang_sel  > ul > li > a, #site-header .header-bar .lang_sel > ul > li > a, #site-header .header-bar #lang_sel > ul > li > a:after, #site-header .header-bar .lang_sel > ul > li > a:after, #site-header .header-bar .mf-currency-widget .current:after,#site-header .header-bar ul.menu > li.menu-item-has-children > a:after{color:' . $menubar_text_color . '}';
 		$inline_css .= '#site-header .header-bar .mf-currency-widget ul li a, #site-header .header-bar #lang_sel ul ul li a {color: #666}';
 	}
 

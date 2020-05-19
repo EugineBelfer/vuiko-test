@@ -133,11 +133,21 @@ endif;
  */
 if ( ! function_exists( 'martfury_header_container_classes' ) ) :
 	function martfury_header_container_classes() {
-		$full_width    = intval( martfury_get_option( 'header_full_width' ) );
-		$custom_header = get_post_meta( get_the_ID(), 'header_container', true );
-		if ( ! empty( $custom_header ) && $custom_header != '2' && is_page() ) {
-			$full_width = intval( $custom_header );
+		$full_width = intval( martfury_get_option( 'header_full_width' ) );
+
+		$page_id = get_the_ID();
+		if ( function_exists( 'is_shop' ) && is_shop() ) {
+			$page_id = get_option( 'woocommerce_shop_page_id' );
 		}
+		$custom_header = get_post_meta( $page_id, 'header_container', true );
+		if ( is_page() || ( function_exists( 'is_shop' ) && is_shop() ) ) {
+			if( $custom_header == '0'  ) {
+				$full_width = 0;
+			} elseif( $custom_header == '1'  ) {
+				$full_width = 1;
+			}
+		}
+
 
 		return $full_width ? 'martfury-container' : 'container';
 	}
@@ -153,9 +163,17 @@ endif;
 if ( ! function_exists( 'martfury_footer_container_classes' ) ) :
 	function martfury_footer_container_classes() {
 		$full_width    = intval( martfury_get_option( 'footer_full_width' ) );
-		$custom_header = get_post_meta( get_the_ID(), 'footer_container', true );
-		if ( ! empty( $custom_header ) && $custom_header != '2' && is_page() ) {
-			$full_width = intval( $custom_header );
+		$page_id = get_the_ID();
+		if ( function_exists( 'is_shop' ) && is_shop() ) {
+			$page_id = get_option( 'woocommerce_shop_page_id' );
+		}
+		$custom_header = get_post_meta( $page_id, 'footer_container', true );
+		if ( is_page() || ( function_exists( 'is_shop' ) && is_shop() ) ) {
+			if( $custom_header == '0'  ) {
+				$full_width = 0;
+			} elseif( $custom_header == '1'  ) {
+				$full_width = 1;
+			}
 		}
 
 		return $full_width ? 'martfury-container' : 'container';

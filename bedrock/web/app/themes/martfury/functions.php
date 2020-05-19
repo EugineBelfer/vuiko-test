@@ -120,6 +120,9 @@ function martfury_register_sidebar() {
 	$custom_sidebar = martfury_get_option( 'custom_product_cat_sidebars' );
 	if ( $custom_sidebar ) {
 		foreach ( $custom_sidebar as $sidebar ) {
+			if ( ! isset( $sidebar['title'] ) || empty( $sidebar['title'] ) ) {
+				continue;
+			}
 			$title                                = $sidebar['title'];
 			$sidebars[ sanitize_title( $title ) ] = $title;
 		}

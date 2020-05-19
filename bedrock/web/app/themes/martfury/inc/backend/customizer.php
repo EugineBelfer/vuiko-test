@@ -1459,7 +1459,7 @@ function martfury_customize_settings() {
 				array(
 					'setting'  => 'header_layout',
 					'operator' => 'in',
-					'value'    => array( '1', '2', '3', '4', '5', '6', '7' ),
+					'value'    => array( '1', '2', '3', '4', '5', '6', '7', '9' ),
 				),
 			),
 		),
@@ -1585,7 +1585,7 @@ function martfury_customize_settings() {
 				array(
 					'setting'  => 'header_layout',
 					'operator' => 'in',
-					'value'    => array( '1', '4', '5', '6', '7' ),
+					'value'    => array( '1', '4', '5', '6', '7', '9' ),
 				),
 			),
 
@@ -2279,7 +2279,7 @@ function martfury_customize_settings() {
 				array(
 					'setting'  => 'header_layout',
 					'operator' => 'in',
-					'value'    => array( '1', '3' ),
+					'value'    => array( '1', '3', '7' ),
 				),
 			),
 		),

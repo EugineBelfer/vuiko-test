@@ -1,6 +1,6 @@
-<div id="topbar" class="topbar">
+<div id="topbar" class="topbar <?php martfury_topbar_classes(); ?>">
     <div class="<?php echo martfury_header_container_classes(); ?>">
-        <div class="row">
+        <div class="row topbar-row">
 			<?php if ( intval( martfury_get_option( 'topbar' ) ) ) : ?>
                 <div class="topbar-left topbar-sidebar col-xs-12 col-sm-12 col-md-5 hidden-xs hidden-sm">
 					<?php if ( is_active_sidebar( 'topbar-left' ) ) {

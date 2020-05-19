@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "70ade2b35b474737f34b047767e5e020",
+    "content-hash": "d673c969fbc613c6d86314b9ed0dfc23",
     "packages": [
         {
             "name": "automattic/jetpack-autoloader",
@@ -1090,6 +1090,60 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/kirki/"
+        },
+        {
+            "name": "wpackagist-plugin/wc-frontend-manager",
+            "version": "6.4.9",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wc-frontend-manager/",
+                "reference": "tags/6.4.9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wc-frontend-manager.6.4.9.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wc-frontend-manager/"
+        },
+        {
+            "name": "wpackagist-plugin/wc-multivendor-marketplace",
+            "version": "3.3.12",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wc-multivendor-marketplace/",
+                "reference": "tags/3.3.12"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wc-multivendor-marketplace.3.3.12.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wc-multivendor-marketplace/"
+        },
+        {
+            "name": "wpackagist-plugin/wc-multivendor-membership",
+            "version": "2.8.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wc-multivendor-membership/",
+                "reference": "tags/2.8.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wc-multivendor-membership.2.8.6.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wc-multivendor-membership/"
         }
     ],
     "packages-dev": [

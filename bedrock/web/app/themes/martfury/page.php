@@ -11,7 +11,7 @@
  */
 
 get_header(); ?>
-
+<?php if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'single' ) ) { ?>
 	<div id="primary" class="content-area <?php martfury_content_columns(); ?>">
 		<main id="main" class="site-main">
 
@@ -30,6 +30,6 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
+    <?php get_sidebar(); ?>
+<?php } ?>
 <?php get_footer(); ?>

@@ -100,6 +100,9 @@ function martfury_breadcrumbs( $args = '' ) {
 
 		if ( is_singular( 'product' ) ) {
 			$taxonomy = 'product_cat';
+			if ( $page_id = get_option( 'woocommerce_shop_page_id' ) ) {
+				$items[] = sprintf( $item_tpl, esc_url( get_permalink( $page_id ) ), get_the_title( $page_id ) );
+			}
 		}
 
 		if ( ! function_exists( 'wc_get_product_terms' ) ) {
@@ -167,6 +170,10 @@ function martfury_breadcrumbs( $args = '' ) {
 
 
 	} elseif ( is_tax() || is_category() || is_tag() ) {
+		if ( $page_id = get_option( 'woocommerce_shop_page_id' ) ) {
+			$items[] = sprintf( $item_tpl, esc_url( get_permalink( $page_id ) ), get_the_title( $page_id ) );
+		}
+
 		$current_term = get_queried_object();
 		$terms        = martfury_get_term_parents( get_queried_object_id(), $current_term->taxonomy );
 

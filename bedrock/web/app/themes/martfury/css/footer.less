@@ -27,7 +27,7 @@
 		.newsletter-form {
 			.mc4wp-form-fields {
 				display: flex;
-				align-items: center;
+				align-items: flex-end;
 
 				input[type="email"] {
 					border: 1px solid #ccc;
@@ -114,9 +114,29 @@
 		justify-content: space-between;
 		border-bottom: 1px solid #e1e1e1;
 		flex-wrap: wrap;
+		margin: 0 -15px;
 
 		.footer-sidebar {
 			max-width: 33.33%;
+			padding: 0 15px;
+		}
+
+		&.columns-5 {
+			.footer-sidebar {
+				max-width: 20%;
+			}
+		}
+
+		&.columns-6 {
+			.footer-sidebar {
+				max-width: 16.6%;
+			}
+		}
+
+		&.columns-4 {
+			.footer-sidebar {
+				max-width: 25%;
+			}
 		}
 
 		.widget {

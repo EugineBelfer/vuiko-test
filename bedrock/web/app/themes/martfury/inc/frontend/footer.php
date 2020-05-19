@@ -164,7 +164,7 @@ function martfury_product_images_lightbox() {
 		}
 	}
 
-	if ( class_exists( 'Cartflows_Loader' ) ) {
+	if ( martfury_cartflows_template() ) {
 		return;
 	}
 
@@ -278,7 +278,7 @@ if ( ! function_exists( 'martfury_quick_view_modal' ) ) :
 			}
 		}
 
-		if ( class_exists( 'Cartflows_Loader' ) ) {
+		if ( martfury_cartflows_template() ) {
 			return;
 		}
 		?>
@@ -407,7 +407,7 @@ if ( ! function_exists( 'martfury_off_canvas_mobile_menu' ) ) :
 			}
 		}
 
-		if ( class_exists( 'Cartflows_Loader' ) ) {
+		if (martfury_cartflows_template() ) {
 			return;
 		}
 
@@ -492,7 +492,7 @@ if ( ! function_exists( 'martfury_off_canvas_user_menu' ) ) :
 			}
 		}
 
-		if ( class_exists( 'Cartflows_Loader' ) ) {
+		if ( martfury_cartflows_template() ) {
 			return;
 		}
 		?>

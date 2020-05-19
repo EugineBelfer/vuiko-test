@@ -20,8 +20,9 @@ if ( ! function_exists( 'martfury_footer_widgets' ) ) :
 
 		$footer_widget_columns = martfury_get_option( 'footer_widget_columns' );
 		$columns               = max( 1, absint( $footer_widget_columns ) );
+		$widget_class          = 'columns-' . $footer_widget_columns;
 		?>
-        <div class="footer-widgets" id="footer-widgets">
+        <div class="footer-widgets <?php echo esc_attr( $widget_class ); ?>" id="footer-widgets">
 			<?php
 			for ( $i = 1; $i <= $columns; $i ++ ) :
 				if ( is_active_sidebar( "footer-sidebar-$i" ) ) {

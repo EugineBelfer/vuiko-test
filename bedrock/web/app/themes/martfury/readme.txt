@@ -6,6 +6,33 @@ Martfury is a WooCommerce Marketplace WordPress Theme. The theme is WooCommerce 
 
 Change log:
 
+Version 2.3.4
+
+- Add: Brand field to the compare table
+- Update Revolution Slider 6.2.4
+- Update: Compatible with WooCommerce 4.1.0
+- Fix: Product Numbers Per Page option doesn't work in the attribute archive page
+- Fix: Header Full Width doesn't work in the some pages.
+- Fix: Some minor bugs.
+
+Version 2.3.3
+
+- Fix: Header is not full with in some pages
+- Fix: Shop by Department icon doesn't work.
+- Fix: Compatible with Elementor Archive & Single Builder.
+- Fix: Some minor bugs.
+
+Version 2.3.2
+
+- Update WPBakery Page Builder 6.2
+- Update Revolution Slider 6.2.2
+- Update: Compatible with Elementor Archive & Single Builder.
+- Update: Enable quick view on mobile
+- Fix: Brand error in the dokan dashboard
+- Fix: Menu mobile doesn't work with CartFlows plugin.
+- Fix: Mobile RTL in firefox.
+- Fix: Some minor bugs.
+
 Version 2.3.1
 
 - New: Add new option allow change the taxonomy description below the products in Appearance > Customize > Catalog > Catalog General > Taxonomy Description Position.

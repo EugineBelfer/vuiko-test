@@ -43,7 +43,7 @@ if ( intval( martfury_get_option( 'sticky_header' ) ) && intval( martfury_get_op
 <?php
 printf(
 	'<%1$s class="site-title"><a href="%2$s" rel="home">%3$s</a></%1$s>',
-	is_home() || is_front_page() ? 'h1' : 'p',
+	martfury_is_homepage() ? 'h1' : 'p',
 	esc_url( home_url( '/' ) ),
 	get_bloginfo( 'name' )
 );

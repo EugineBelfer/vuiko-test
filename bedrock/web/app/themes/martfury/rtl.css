@@ -4,7 +4,7 @@ Theme URI: http://demo2.drfuri.com/martfury
 Author: DrFuri
 Author URI: http://demo2.drfuri.com
 Description: WooCommerce Marketplace WordPress Theme
-Version: 2.3.1
+Version: 2.3.4
 License: GNU General Public License v2+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: martfury
@@ -229,6 +229,7 @@ body {
 .mf-currency-widget .current:after {
   left: 0;
   right: auto;
+  padding-left: 0;
 }
 .mf-currency-widget ul {
   right: -15px;
@@ -243,11 +244,43 @@ body {
 .topbar .lang_sel > ul > li a:after {
   left: 0;
   right: auto;
+  padding-left: 0;
 }
 .topbar #lang_sel > ul > li ul,
 .topbar .lang_sel > ul > li ul {
   right: -15px;
   left: auto;
+}
+.topbar .widget:last-child {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.topbar .widget:last-child:after {
+  display: block;
+}
+.topbar .widget:first-child {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.topbar .widget:first-child:after {
+  display: none;
+}
+.header-bar ul.menu ul {
+  right: auto;
+  left: 0;
+}
+.header-bar ul.menu li li:hover > ul {
+  right: auto;
+  left: 100%;
+}
+.topbar ul.menu > li.menu-item-has-children > a {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.topbar ul.menu > li.menu-item-has-children > a:after {
+  left: 0;
+  right: auto;
+  padding-left: 0;
 }
 .nav li > ul {
   left: auto;
@@ -267,19 +300,23 @@ body {
 .nav .menu .is-mega-menu .dropdown-submenu {
   right: auto;
 }
-.site-header .products-search .product-cat-label {
+.site-header .product-extra-search .products-search .product-cat-label {
   border-radius: 0 5px 5px 0;
 }
-.site-header .products-search .search-submit {
+.site-header .product-extra-search .products-search .search-submit {
   border-radius: 5px 0 0 5px;
 }
-.site-header .products-search.searching .search-wrapper:before {
+.site-header .product-extra-search .products-search.searching .search-wrapper:before {
   left: 10px;
   right: auto;
 }
-.site-header .products-search .products-search .search-wrapper .search-results ul li img {
+.site-header .product-extra-search .products-search .search-wrapper .search-results ul li img {
   margin-left: 10px;
   margin-right: 0;
+}
+.site-header .site-title,
+.site-header .site-description {
+  display: none;
 }
 .site-header .extras-menu {
   margin-left: 0;
@@ -328,6 +365,14 @@ body {
 .site-header .products-cats-menu .toggle-product-cats {
   right: 0;
   left: auto;
+}
+.site-header .recently-viewed .recently-title {
+  padding-left: 20px;
+  padding-right: 0;
+}
+.site-header .recently-viewed .recently-title:after {
+  left: 0;
+  right: auto;
 }
 .sticky-header.header-layout-2 .d-department-sticky .toggle-product-cats {
   right: 0 !important;
@@ -1664,9 +1709,6 @@ blockquote cite:before {
   }
 }
 @media (max-width: 1200px) {
-  .site-header .extras-menu .menu-item-account > a {
-    padding-right: 0;
-  }
   .site-header .extras-menu > li:last-child {
     padding-left: 13px;
     padding-right: 13px;

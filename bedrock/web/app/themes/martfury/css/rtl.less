@@ -37,6 +37,7 @@ body {
         &:after {
             left: 0;
             right: auto;
+            padding-left: 0;
         }
     }
 
@@ -55,6 +56,7 @@ body {
         &:after {
             left: 0;
             right: auto;
+            padding-left: 0;
         }
     }
 
@@ -63,6 +65,48 @@ body {
         left: auto;
     }
 
+}
+
+.topbar {
+    .widget {
+        &:last-child {
+            padding-right: 20px;
+            padding-left: 0;
+
+            &:after {
+                display: block;
+            }
+        }
+        &:first-child {
+            padding-left: 20px;
+            padding-right: 0;
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
+
+.header-bar ul.menu ul {
+    right: auto;
+    left: 0;
+}
+
+.header-bar ul.menu li li:hover > ul {
+    right: auto;
+    left: 100%;
+}
+
+.topbar ul.menu > li.menu-item-has-children > a {
+    padding-left: 20px;
+    padding-right: 0;
+
+    &:after {
+        left: 0;
+        right: auto;
+        padding-left: 0;
+    }
 }
 
 .nav {
@@ -90,7 +134,7 @@ body {
 }
 
 .site-header {
-    .products-search {
+    .product-extra-search .products-search {
         .product-cat-label {
             border-radius: 0 5px 5px 0;
         }
@@ -106,12 +150,17 @@ body {
                     right: auto;
                 }
             }
+
         }
 
-        .products-search .search-wrapper .search-results ul li img {
+        .search-wrapper .search-results ul li img {
             margin-left: 10px;
             margin-right: 0;
         }
+    }
+
+    .site-title,.site-description {
+        display: none;
     }
 
     .extras-menu {
@@ -185,6 +234,15 @@ body {
             left: auto;
         }
     }
+
+   .recently-viewed .recently-title {
+       padding-left: 20px;
+       padding-right: 0;
+       &:after {
+           left: 0;
+           right: auto;
+       }
+   }
 
 }
 
@@ -1971,9 +2029,6 @@ blockquote {
 }
 
 @media (max-width: 1200px) {
-    .site-header .extras-menu .menu-item-account > a {
-        padding-right: 0;
-    }
 
     .site-header .extras-menu > li:last-child {
         padding-left: 13px;

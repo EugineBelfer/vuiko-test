@@ -104,34 +104,6 @@
                 right: 0;
             }
 
-            &.first {
-                clear: none;
-            }
-
-            &.un-3-cols {
-                &:nth-child( 3n + 1  ) {
-                    clear: both;
-                }
-            }
-
-            &.un-4-cols {
-                &:nth-child( 4n + 1  ) {
-                    clear: both;
-                }
-            }
-
-            &.un-5-cols {
-                &:nth-child( 5n + 1  ) {
-                    clear: both;
-                }
-            }
-
-            &.un-6-cols {
-                &:nth-child( 6n + 1  ) {
-                    clear: both;
-                }
-            }
-
             .sold-by-meta {
                 display: none;
             }
@@ -272,7 +244,7 @@
                 .yith-wcwl-wishlistexistsbrowse {
                     position: relative;
                     .blockUI {
-                       display: none !important;
+                        display: none !important;
                     }
 
                     & > a {
@@ -378,7 +350,7 @@
                             justify-content: center;
                             border-radius: 50%;
 
-                            .fa-heart-o:before{
+                            .fa-heart-o:before {
                                 .icon('\e68c');
                                 font-size: 18px;
                             }
@@ -599,6 +571,16 @@
             }
 
         }
+
+        &:not(.slick-slider) {
+            display: flex;
+            flex-wrap: wrap;
+
+            &:before,
+            &:after {
+                display: none;
+            }
+        }
     }
 
     .mf-rating {
@@ -663,8 +645,7 @@
         margin-top: 50px;
     }
 
-    &.shop-view-list .mf-shop-content,
-    &.shop-view-list .wcfmmp-store-page-wrap {
+    &.shop-view-list {
         ul.products li.product {
             width: 100%;
             margin-bottom: 0;
@@ -2085,10 +2066,6 @@
 
             }
 
-            p.available-on-backorder {
-                display: none;
-            }
-
         }
 
         .tawcvs-swatches {
@@ -2815,7 +2792,6 @@
                 margin: 0 0 10px;
             }
 
-
             .product-name {
                 .product-price,
                 .product-add-to-cart {
@@ -3070,7 +3046,7 @@
             border: none;
             li {
                 border-right-width: 0;
-                margin: 0;
+                margin: 0 0 10px;
                 padding: 0 5px;
                 list-style: none;
 
@@ -3671,6 +3647,7 @@
                     color: @dark;
                     position: relative;
                     margin-bottom: 35px;
+                    margin-top: 0;
 
                     &:after {
                         .icon('\e93a');
@@ -3899,7 +3876,7 @@
             opacity: 0;
             display: none;
 
-            &:checked +  span {
+            &:checked + span {
 
                 &:before {
                     content: "\e999";
@@ -4708,10 +4685,10 @@
             align-items: center;
             justify-content: space-between;
 
-           .woocommerce-form__label-for-checkbox {
-               display: inline-block;
-               line-height: 1;
-           }
+            .woocommerce-form__label-for-checkbox {
+                display: inline-block;
+                line-height: 1;
+            }
         }
 
         .password-input {
@@ -4725,7 +4702,7 @@
                 cursor: pointer;
 
                 &.display-password {
-                  opacity: 0.5;
+                    opacity: 0.5;
                 }
 
                 &:before {
@@ -6033,12 +6010,12 @@
 }
 
 .mf-catalog-layout-3,
-.mf-catalog-layout-10{
+.mf-catalog-layout-10 {
     .mf-catalog-title {
         font-size: 24px;
         font-weight: 600;
         text-transform: uppercase;
-        margin: 0 0 20px;
+        margin: 20px 0;
     }
 }
 
@@ -7867,7 +7844,9 @@ section.related {
     #cboxBottomLeft,
     #cboxBottomCenter,
     #cboxBottomRight {
-        display: none;
+        background: transparent;
+        width: 0;
+        height: 0;
     }
 
     #cboxClose {

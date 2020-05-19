@@ -365,6 +365,12 @@ class Martfury_WooCommerce {
 
 		add_filter( 'yith_wcwl_localize_script', array( $this, 'wcwl_localize_script' ) );
 
+		add_filter( 'martfury_catalog_page_title', array( $this, 'catalog_enable_page_title' ) );
+
+		add_filter( 'yith_woocompare_filter_table_fields', array( $this, 'woocompare_filter_table_fields' ) );
+
+		add_action( 'yith_woocompare_field_brand', array( $this, 'woocompare_field_brand' ) );
+
 	}
 
 	function mf_child_product_categories_widget_args( $args ) {
@@ -810,22 +816,26 @@ class Martfury_WooCommerce {
 			global $woocommerce_loop;
 
 			$sm_class = 'col-sm-4';
-
-			if ( $woocommerce_loop['columns'] == 2 ) {
-				$sm_class = 'col-sm-6';
-			}
 			$md_class = 'col-md-3';
-			if ( $woocommerce_loop['columns'] == 3 ) {
-				$md_class = 'col-md-4';
+			if ( isset( $woocommerce_loop['columns'] ) ) {
+				if ( $woocommerce_loop['columns'] == 2 ) {
+					$sm_class = 'col-sm-6';
+				}
+				if ( $woocommerce_loop['columns'] == 3 ) {
+					$md_class = 'col-md-4';
+				}
 			}
 
 			$classes[] = 'col-xs-6 ' . $sm_class;
-			if ( $woocommerce_loop['columns'] != 5 && $woocommerce_loop['columns'] > 0 ) {
-				$classes[] = $md_class . ' col-lg-' . ( 12 / $woocommerce_loop['columns'] );
-			} else {
-				$classes[] = 'col-mf-5';
+			if ( isset( $woocommerce_loop['columns'] ) ) {
+				if ( $woocommerce_loop['columns'] != 5 && $woocommerce_loop['columns'] > 0 ) {
+					$classes[] = $md_class . ' col-lg-' . ( 12 / $woocommerce_loop['columns'] );
+				} else {
+					$classes[] = 'col-mf-5';
+				}
+				$classes[] = 'un-' . $woocommerce_loop['columns'] . '-cols';
 			}
-			$classes[] = 'un-' . $woocommerce_loop['columns'] . '-cols';
+
 
 		} else {
 			$classes[]      = 'mf-single-product';
@@ -1180,9 +1190,19 @@ class Martfury_WooCommerce {
 		if ( ! in_array( 'title', $this->catalog_elements ) ) {
 			return;
 		}
+		the_archive_title( '<h1 class="mf-catalog-title">', '</h1>' );
+	}
 
-		the_archive_title( '<h2 class="mf-catalog-title">', '</h2>' );
+	function catalog_enable_page_title() {
+		if ( ! martfury_is_catalog() ) {
+			return true;
+		}
 
+		if ( $this->catalog_layout == '3' || $this->catalog_layout == '10' ) {
+			return false;
+		}
+
+		return true;
 	}
 
 	/**
@@ -2310,7 +2330,7 @@ class Martfury_WooCommerce {
 					$this->single_product_brand();
 
 					if ( function_exists( 'woocommerce_template_single_rating' ) && $product->get_rating_count() ) {
-						echo '<li>';
+						echo '<li class="meta-review">';
 						woocommerce_template_single_rating();
 						echo '</li>';
 					}
@@ -3405,6 +3425,15 @@ class Martfury_WooCommerce {
 
 		$products    = array_merge( $products_sku, $products_s, $products_variation_sku );
 		$product_ids = array();
+
+		$thumbnail_size = 'shop_thumbnail';
+		if ( function_exists( 'wc_get_image_size' ) ) {
+			$gallery_thumbnail = wc_get_image_size( 'gallery_thumbnail' );
+			$thumbnail_size    = apply_filters( 'woocommerce_gallery_thumbnail_size', array(
+				$gallery_thumbnail['width'],
+				$gallery_thumbnail['height']
+			) );
+		}
 		foreach ( $products as $product ) {
 			$id = $product->ID;
 			if ( ! in_array( $id, $product_ids ) ) {
@@ -3425,7 +3454,7 @@ class Martfury_WooCommerce {
 					'</div>' .
 					'</li>',
 					esc_url( $productw->get_permalink() ),
-					$productw->get_image( 'shop_thumbnail' ),
+					$productw->get_image( $thumbnail_size ),
 					esc_url( $productw->get_permalink() ),
 					$productw->get_title(),
 					wc_get_rating_html( $productw->get_average_rating() ),
@@ -4044,4 +4073,26 @@ class Martfury_WooCommerce {
 
 		return $yith_wcwl_l10n;
 	}
+
+	function woocompare_filter_table_fields( $fields ) {
+		if ( ! taxonomy_exists( 'product_brand' ) ) {
+			return $fields;
+		}
+		$fields['brand'] = esc_html__( 'Brand', 'martfury' );
+
+		return $fields;
+	}
+
+	function woocompare_field_brand($product) {
+		if ( ! taxonomy_exists( 'product_brand' ) ) {
+			return $product;
+		}
+
+		$terms = get_the_terms( $product->get_id(), 'product_brand' );
+
+		if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
+			$product->fields['brand'] = esc_html( $terms[0]->name );
+        }
+		return $product;
+    }
 }

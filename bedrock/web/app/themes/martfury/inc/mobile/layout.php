@@ -200,7 +200,7 @@ class Martfury_Mobile {
 			}
 		}
 
-		if ( class_exists( 'Cartflows_Loader' ) ) {
+		if ( martfury_cartflows_template() ) {
 			return;
 		}
 
@@ -216,7 +216,7 @@ class Martfury_Mobile {
 			}
 		}
 
-		if ( class_exists( 'Cartflows_Loader' ) ) {
+		if ( martfury_cartflows_template() ) {
 			return;
 		}
 

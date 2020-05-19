@@ -74,7 +74,7 @@ class Martfury_WCFMVendors {
 			return;
 		}
 
-		global $WCFM, $post;
+		global $WCFM, $post,$WCFMmp;
 
 		$vendor_id = $WCFM->wcfm_vendor_support->wcfm_get_vendor_id_from_product( $post->ID );
 
@@ -83,6 +83,9 @@ class Martfury_WCFMVendors {
 		}
 
 		$sold_by_text = apply_filters( 'wcfmmp_sold_by_label', esc_html__( 'Sold By:', 'martfury' ) );
+		if( $WCFMmp ) {
+			$sold_by_text = $WCFMmp->wcfmmp_vendor->sold_by_label( absint($vendor_id) );
+		}
 		$store_name   = $WCFM->wcfm_vendor_support->wcfm_get_vendor_store_by_vendor( absint( $vendor_id ) );
 
 		echo '<div class="sold-by-meta">';

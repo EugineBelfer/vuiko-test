@@ -51,9 +51,8 @@ class Martfury_DokanFM {
 				'title_li'         => '',
 				'class'            => 'product_cat dokan-form-control dokan-select2',
 				'exclude'          => '',
-				'selected'         => array(),
-				'echo'             => 0,
-				'walker'           => class_exists( 'DokanTaxonomyWalker' ) ? new DokanTaxonomyWalker() : ''
+				'selected'         => '',
+				'echo'             => 0
 			) );
 
 			echo str_replace( '<select', '<select data-placeholder="' . esc_html__( 'Select product brand', 'martfury' ) . '"', $drop_down_brands ); // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped
@@ -69,10 +68,10 @@ class Martfury_DokanFM {
 			return;
 		}
 		$term     = wp_get_post_terms( $post_id, 'product_brand', array( 'fields' => 'ids' ) );
-		$selected = ( $term ) ? $term : array();
+		$selected = $term ? $term[0] : '';
 		?>
         <label for="product_brand" class="form-label"><?php esc_html_e( 'Brands', 'martfury' ); ?></label>
-        <div class="dokan-form-group">
+        <div class="dokan-form-group dokan-form-brand-group">
 			<?php
 			$drop_down_brands = wp_dropdown_categories( array(
 				'show_option_none' => __( '- Select a brand -', 'martfury' ),
@@ -85,8 +84,7 @@ class Martfury_DokanFM {
 				'class'            => 'product_brand dokan-form-control dokan-select2',
 				'exclude'          => '',
 				'selected'         => $selected,
-				'echo'             => 0,
-				'walker'           => class_exists( 'DokanTaxonomyWalker' ) ? new DokanTaxonomyWalker( $post_id ) : ''
+				'echo'             => 0
 			) );
 
 			echo str_replace( '<select', '<select data-placeholder="' . esc_html__( 'Select product brand', 'martfury' ) . '" ', $drop_down_brands ); // phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped
