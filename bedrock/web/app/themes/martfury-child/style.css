@@ -12,3 +12,66 @@ Domain Path: /lang/
 Tags: one-column, two-columns, left-sidebar, right-sidebar, full-width-template, post-formats, theme-options, threaded-comments, translation-ready
 Template: martfury
 */
+
+/* begin toggle switch styles */
+.checkboxoffon_title {
+    position: relative;
+    top: 30px;
+    left: 90px;
+}
+
+.onoffswitch .toggle.btn .toggle-handle
+{
+    right: 15px;
+}
+
+.onoffswitch .toggle.btn.off .toggle-handle
+{
+    left: 15px;
+}
+
+.onoffswitch .toggle.btn {
+    width: 80px;
+    height: auto;
+    min-height: 30px;
+}
+
+.onoffswitch .toggle,
+.onoffswitch .toggle-on,
+.onoffswitch .toggle-off {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.onoffswitch .toggle-on,
+.onoffswitch .toggle-off {
+    height: 30px;
+    line-height: 30px;
+}
+
+#wcfm-main-contentainer .onoffswitch input[type="checkbox"].onoffswitch-checkbox {
+    display: none;
+}
+
+.onoffswitch .toggle-handle {
+    background-color: white;
+    display: block;
+    padding: 0 10px;
+    margin: 5px auto;
+    height: calc(100% - 10px);
+}
+
+.onoffswitch .toggle-on.btn {
+    padding-left: 0;
+    padding-right: 15px;
+}
+
+.onoffswitch .toggle-off.btn {
+    padding-right: 0;
+    padding-left: 15px;
+}
+
+.onoffswitch .btn {
+    border-radius: 4px;
+}
+/* end toggle switch styles */
